@@ -21,7 +21,23 @@ public class CadastroProdutos {
             opcao = scanner.nextInt();
             scanner.nextLine();
 
+            switch (opcao) {
+                case 1:
+                    System.out.print("Nome do produto: ");
+                    String nome = scanner.nextLine();
+                    System.out.print("Preço do produto: ");
+                    double preco = scanner.nextDouble();
+                    nomes.add(nome);
+                    precos.add(preco);
+                    break;
 
+                case 2:
+                    System.out.println("\n--- Lista de Produtos ---");
+                    for (int i = 0; i < nomes.size(); i++) {
+                        System.out.println((i + 1) + ". " + nomes.get(i) + " - R$" + precos.get(i));
+                    }
+                    break;
+            }
         }
     }
 }
