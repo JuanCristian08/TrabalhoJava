@@ -6,7 +6,7 @@ Este projeto é um sistema simples de cadastro e consulta de produtos desenvolvi
 
 - **Gustavo Spengler** – Desenvolveu cálculos (média, produto mais caro)
 - **Juan Borba** – Implementou cadastro e listagem de produtos e menu.
-- **Aline Mess** –  Implementou funcionalidades extras (remoção, atualização)
+- **Aline Mees** –  Implementou funcionalidades extras (remoção, atualização)
 
 ## Principais Dificuldades
 
