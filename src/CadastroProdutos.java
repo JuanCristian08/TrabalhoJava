@@ -76,7 +76,7 @@ public class CadastroProdutos {
         System.out.print("Escolha uma opção: ");
     }
     
-    // Método para ler a opção do menu com tratamento de erro
+    // tratamento de erro
     public static int lerOpcao() {
         try {
             int opcao = Integer.parseInt(scanner.nextLine());
@@ -86,20 +86,20 @@ public class CadastroProdutos {
         }
     }
     
-    // Método para cadastrar um novo produto
+    //cadastrar novo produto
     public static void cadastrarProduto() {
         System.out.println("\n--- CADASTRAR PRODUTO ---");
         
         System.out.print("Digite o nome do produto: ");
         String nome = scanner.nextLine().trim();
         
-        // Verificar se o nome não está vazio
+        // Verifica != vazio
         if (nome.isEmpty()) {
             System.out.println("Erro: Nome do produto não pode estar vazio!");
             return;
         }
         
-        // Verificar se o produto já existe (desafio extra)
+        // Verifica se o produto já existe
         if (produtoJaExiste(nome)) {
             System.out.println("Erro: Produto '" + nome + "' já está cadastrado!");
             return;
@@ -114,7 +114,7 @@ public class CadastroProdutos {
                 return;
             }
             
-            // Adicionar às listas paralelas
+            //listas paralelas
             nomesProdutos.add(nome);
             precosProdutos.add(preco);
             
@@ -126,7 +126,7 @@ public class CadastroProdutos {
         }
     }
     
-    // Método para verificar se produto já existe
+    // produto já existe
     public static boolean produtoJaExiste(String nome) {
         for (String produto : nomesProdutos) {
             if (produto.equalsIgnoreCase(nome)) {
@@ -136,7 +136,7 @@ public class CadastroProdutos {
         return false;
     }
     
-    // Método para listar todos os produtos
+    //view todos os produtos
     public static void listarProdutos() {
         System.out.println("\n--- LISTA DE PRODUTOS ---");
         
@@ -154,7 +154,7 @@ public class CadastroProdutos {
         }
     }
     
-    // Método para mostrar o produto mais caro
+    //produto mais caro
     public static void mostrarProdutoMaisCaro() {
         System.out.println("\n--- PRODUTO MAIS CARO ---");
         
@@ -177,8 +177,7 @@ public class CadastroProdutos {
         System.out.printf("Produto mais caro: %s%n", nomesProdutos.get(indiceMaiorPreco));
         System.out.printf("Preço: R$ %.2f%n", maiorPreco);
     }
-    
-    // Método para calcular a média de preços
+
     public static void calcularMediaPrecos() {
         System.out.println("\n--- MÉDIA DE PREÇOS ---");
         
@@ -199,7 +198,6 @@ public class CadastroProdutos {
         System.out.printf("Média de preços: R$ %.2f%n", media);
     }
     
-    // Método para listar produtos com preço acima da média
     public static void listarProdutosAcimaDaMedia() {
         System.out.println("\n--- PRODUTOS ACIMA DA MÉDIA ---");
         
@@ -233,7 +231,6 @@ public class CadastroProdutos {
         }
     }
     
-    // DESAFIO EXTRA: Remover produto
     public static void removerProduto() {
         System.out.println("\n--- REMOVER PRODUTO ---");
         
@@ -267,7 +264,6 @@ public class CadastroProdutos {
         }
     }
     
-    // DESAFIO EXTRA: Atualizar preço
     public static void atualizarPrecoProduto() {
         System.out.println("\n--- ATUALIZAR PREÇO ---");
         
@@ -315,7 +311,6 @@ public class CadastroProdutos {
         }
     }
     
-    // DESAFIO EXTRA: Calcular total do estoque
     public static void calcularTotalEstoque() {
         System.out.println("\n--- TOTAL DO ESTOQUE ---");
         
